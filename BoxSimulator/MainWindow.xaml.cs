@@ -82,7 +82,7 @@ namespace BoxSimulator
                 Thread.Sleep(i * i);
             }
             anim.animate(this, -50 * (currentElement) + 25 - losowa, 0.8 * losowa/47); //surprice anim :D
-            Thread.Sleep(800);
+            Thread.Sleep(Convert.ToInt32(800 * losowa / 47));
             wynik();
         }
 
