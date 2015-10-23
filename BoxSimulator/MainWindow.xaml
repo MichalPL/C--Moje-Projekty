@@ -1,0 +1,60 @@
+﻿<Window x:Class="BoxSimulator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Box Simulator" Height="266" Width="294" ResizeMode="NoResize">
+    <Window.Resources>
+        <Storyboard x:Key="CarouselStoryboard">
+            <DoubleAnimation
+                Storyboard.TargetName="CarouselTransform" 
+                Storyboard.TargetProperty="X"/>
+        </Storyboard>
+    </Window.Resources>
+    <Canvas>
+        <StackPanel Name="Carousel" Orientation="Horizontal" Canvas.Left="115" Canvas.Top="80"  Visibility="Hidden">
+            <StackPanel.RenderTransform>
+                <TranslateTransform x:Name="CarouselTransform" />
+            </StackPanel.RenderTransform>
+            <Image Name="i1" Height="50" Width="50" Stretch="Fill"/>
+            <Image Name="i2" Height="50" Width="50" Stretch="Fill"  />
+            <Image Name="i3" Height="50" Width="50"  Stretch="Fill" />
+            <Image Name="i4" Height="50" Width="50"  Stretch="Fill" />
+            <Image Name="i5" Height="50" Width="50"  Stretch="Fill" />
+            <Image Name="i6" Height="50" Width="50"  Stretch="Fill" />
+            <Image Name="i7" Height="50" Width="50"  Stretch="Fill" />
+            <Image Name="i8" Height="50" Width="50"  Stretch="Fill" />
+            <Image Name="i9" Height="50" Width="50"  Stretch="Fill" />
+            <Image Name="i10" Height="50" Width="50"  Stretch="Fill" />
+            <Image Name="i11" Height="50" Width="50"  Stretch="Fill" />
+            <Image Name="i12" Height="50" Width="50"  Stretch="Fill" />
+            <Image Name="i13" Height="50" Width="50"  Stretch="Fill" />
+            <Image Name="i14" Height="50" Width="50"  Stretch="Fill" />
+            <Image Name="i15" Height="50" Width="50"  Stretch="Fill" />
+            <Image Name="i16" Height="50" Width="50" Stretch="Fill"  />
+            <Image Name="i17" Height="50" Width="50"  Stretch="Fill" />
+            <Image Name="i18" Height="50" Width="50" Stretch="Fill"  />
+            <Image Name="i19" Height="50" Width="50" Stretch="Fill"  />
+            <Image Name="i20" Height="50" Width="50" Stretch="Fill"  />
+            <Image Name="i21" Height="50" Width="50" Stretch="Fill"  />
+            <Image Name="i22" Height="50" Width="50" Stretch="Fill"  />
+            <Image Name="i23" Height="50" Width="50" Stretch="Fill"  />
+            <Image Name="i24" Height="50" Width="50" Stretch="Fill"  />
+            <Image Name="i25" Height="50" Width="50" Stretch="Fill"  />
+            <Image Name="i26" Height="50" Width="50" Stretch="Fill"  />
+            <Image Name="i27" Height="50" Width="50" Stretch="Fill"  />
+            <Image Name="i28" Height="50" Width="50" Stretch="Fill"  />
+            <Image Name="i29" Height="50" Width="50" Stretch="Fill"  />
+            <Image Name="i30" Height="50" Width="50" Stretch="Fill"  />
+            <Image Name="i31" Height="50" Width="50" Stretch="Fill"  />
+            <Image Name="i32" Height="50" Width="50" Stretch="Fill"  />
+            <Image Name="i33" Height="50" Width="50" Stretch="Fill"  />
+            <Image Name="i34" Height="50" Width="50" Stretch="Fill"  />
+            <Image Name="i35" Height="50" Width="50" Stretch="Fill"  />
+        </StackPanel>
+        <Button Click="Right_Click" Name="otworz" Content="Open Box" HorizontalAlignment="Left" VerticalAlignment="Top" Width="73" Canvas.Left="108" Canvas.Top="183" Height="36" Visibility="Visible"/>
+        <Button Click="Reset" Name="reset"  Content="Reset" HorizontalAlignment="Left" VerticalAlignment="Top" Width="73" Canvas.Left="108" Canvas.Top="183" Height="36" Visibility="Hidden"/>
+        <Rectangle Fill="White" Name="Wsk" Height="49" Canvas.Left="140" Stroke="Black" Canvas.Top="108" Width="3" RenderTransformOrigin="0.5,0.5" Visibility="Hidden"/>
+        <Label Content="Box Simulator" Canvas.Left="75" Canvas.Top="10" Width="151" FontSize="22"/>
+        <Image Height="106" Name="box" Canvas.Left="93" Canvas.Top="54" Width="106" RenderTransformOrigin="0.47,0.5"/>
+        <Label x:Name="lbl1" Content="" Canvas.Left="10" Canvas.Top="156" Width="268"/>
+    </Canvas>
+</Window>
