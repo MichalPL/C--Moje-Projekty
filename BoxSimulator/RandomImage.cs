@@ -70,9 +70,9 @@ namespace BoxSimulator
 
         private void FAKEfillRanges()
         {
-            FAKEranges.Add(5); //g90
-            FAKEranges.Add(10); //g80
-            FAKEranges.Add(10); //g80 armor
+            FAKEranges.Add(25); //g90
+            FAKEranges.Add(40); //g80
+            FAKEranges.Add(40); //g80 armor
             FAKEranges.Add(200); //g75
             FAKEranges.Add(200); //g70 armor
             FAKEranges.Add(1000); //g70

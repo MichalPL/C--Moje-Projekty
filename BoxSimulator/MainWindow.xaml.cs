@@ -29,6 +29,7 @@ namespace BoxSimulator
         RandomImage ri;
         List<string> list = new List<string>();
         ButtonController bc;
+        int boxCounter = 0;
         public MainWindow()
         {
             InitializeComponent();
@@ -89,6 +90,8 @@ namespace BoxSimulator
         private void Right_Click(object sender, RoutedEventArgs e)
         {
              bc.open();
+             boxCounter++;
+             count1.Content = boxCounter.ToString();
         }
 
         private void Reset(object sender, RoutedEventArgs e)

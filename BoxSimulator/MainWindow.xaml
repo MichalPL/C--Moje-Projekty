@@ -1,7 +1,7 @@
 ﻿<Window x:Class="BoxSimulator.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Box Simulator" Height="266" Width="294" ResizeMode="NoResize">
+        Title="Box Simulator" Height="285" Width="294" ResizeMode="NoResize">
     <Window.Resources>
         <Storyboard x:Key="CarouselStoryboard">
             <DoubleAnimation
@@ -56,5 +56,7 @@
         <Label Content="Box Simulator" Canvas.Left="75" Canvas.Top="10" Width="151" FontSize="22"/>
         <Image Height="106" Name="box" Canvas.Left="93" Canvas.Top="54" Width="106" RenderTransformOrigin="0.47,0.5"/>
         <Label x:Name="lbl1" Content="" Canvas.Left="10" Canvas.Top="156" Width="268"/>
+        <Label Name="count" Content="Box Counter: " Canvas.Top="220" Canvas.Left="10" FontSize="12"/>
+        <Label x:Name="count1" Content="0" Canvas.Left="91" Canvas.Top="220"/>
     </Canvas>
 </Window>
