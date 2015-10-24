@@ -30,69 +30,29 @@ namespace BoxSimulator
             prevPoint = new List<int>();
             ranges = new List<int>();
             prevPoint.Add(0);
-            fillRanges();
+            fillRanges(ranges, prevPoint, 5, 10, 10, 200, 200, 1000, 1000, 5000, 80000, 170000, 10000, 12000, 
+                10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 16000, 14000, 15000, 10000, 10000, 15000, 20000);
+            //g90, g80, g80a, g75, g70a, g70, g65a, gold ingot, gold coin, silver coin, exp stone, wealth stone, scrolls x8,
+            //abs, water, solublizier, silvery carp, silvery eel, diamond stone, toe
             sumOfRanges = rangesSum(ranges);
 
             //FAKE
             FAKEprevPoint = new List<int>();
             FAKEranges = new List<int>();
             FAKEprevPoint.Add(0);
-            FAKEfillRanges();
+            fillRanges(FAKEranges, FAKEprevPoint, 25, 40, 40, 200, 200, 1000, 1000, 5000, 8000, 17000, 1000, 1200,
+                1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1600, 1400, 1500, 1000, 1000, 1500, 2000);
             FAKEsumOfRanges = rangesSum(FAKEranges);
         }
 
-        private void fillRanges()
+        private void fillRanges(List<int> rangeList, List<int> pointList, params int[] intList)
         {
-            ranges.Add(5); //g90
-            ranges.Add(10); //g80
-            ranges.Add(10); //g80 armor
-            ranges.Add(200); //g75
-            ranges.Add(200); //g70 armor
-            ranges.Add(1000); //g70
-            ranges.Add(1000); //g65 armor
-            ranges.Add(5000); // gold ingot
-            ranges.Add(80000); // gold coin
-            ranges.Add(170000); //silver coin
-            ranges.Add(10000); //exp stone
-            ranges.Add(12000); //wealth stone
-            for (int i = 0; i < 8; i++)
-                ranges.Add(10000); //scrolls,
-            ranges.Add(16000); //abs
-            ranges.Add(14000); //water of 8 trigrams
-            ranges.Add(15000); // solubilizer
-            ranges.Add(10000); //Silvery Carp
-            ranges.Add(10000); //Silvery Eel
-            ranges.Add(15000); //Diamond Stone
-            ranges.Add(20000); //TOE
-            for (int i = 0; i < ranges.Count(); i++)
-                switchRange(ranges[i], prevPoint);
-        }
-
-        private void FAKEfillRanges()
-        {
-            FAKEranges.Add(25); //g90
-            FAKEranges.Add(40); //g80
-            FAKEranges.Add(40); //g80 armor
-            FAKEranges.Add(200); //g75
-            FAKEranges.Add(200); //g70 armor
-            FAKEranges.Add(1000); //g70
-            FAKEranges.Add(1000); //g65 armor
-            FAKEranges.Add(5000); // gold ingot
-            FAKEranges.Add(8000); // gold coin
-            FAKEranges.Add(17000); //silver coin
-            FAKEranges.Add(1000); //exp stone
-            FAKEranges.Add(1200); //wealth stone
-            for (int i = 0; i < 8; i++)
-                FAKEranges.Add(1000); //scrolls,
-            FAKEranges.Add(1600); //abs
-            FAKEranges.Add(1400); //water of 8 trigrams
-            FAKEranges.Add(1500); // solubilizer
-            FAKEranges.Add(1000); //Silvery Carp
-            FAKEranges.Add(1000); //Silvery Eel
-            FAKEranges.Add(1500); //Diamond Stone
-            FAKEranges.Add(2000); //TOE
-            for (int i = 0; i < FAKEranges.Count(); i++)
-                switchRange(FAKEranges[i], FAKEprevPoint);
+            for (int i = 0; i < intList.Length; i++ )
+            {
+                rangeList.Add(intList[i]);
+            }
+            for (int i = 0; i < rangeList.Count(); i++)
+                switchRange(rangeList[i], pointList);
         }
 
         public List<string> fill() 
